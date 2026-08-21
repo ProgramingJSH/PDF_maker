@@ -1,0 +1,20 @@
+[project]
+name = "pdf-maker"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ProgramingJSH", email = "programingjsh@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "jinja2>=3.1.6",
+    "weasyprint>=69.0",
+]
+
+[project.scripts]
+pdf-maker = "pdf_maker:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
