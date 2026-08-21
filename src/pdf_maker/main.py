@@ -23,7 +23,9 @@ def main():
         template = Template(template_str)
         html_content = template.render(data)
 
+
         # PDF 생성
+        OUTPUT.mkdir(exist_ok=True)
         output_name = OUTPUT / f"{data['study_no']}. {data['title']}.pdf"
         weasyprint.HTML(string=html_content).write_pdf(output_name)
 
