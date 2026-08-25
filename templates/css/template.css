@@ -1,0 +1,96 @@
+/* 일본어 & 한자용 Klee One 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
+
+/* A4 사이즈 및 배경색 설정 */
+@page {
+    size: A4;
+    margin: 10mm 15mm;
+    background-color: #f8f5f0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    color: #332b29;
+    line-height: 1.6;
+}
+h1 {
+    text-align: center;
+    font-size: 24pt;
+    color: #8c5a46;
+    margin-bottom: 5px;
+}
+.subtitle {
+    text-align: center;
+    font-size: 14pt;
+    color: #a33a36;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e6dfd5;
+    border-radius: 8px;
+}
+h2 {
+    font-size: 16pt;
+    color: #8c5a46;
+    border-bottom: 2px solid #e6dfd5;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+.lyrics {
+    font-size: 12pt;
+    background-color: #fdfbf7;
+    padding: 15px;
+    border-left: 4px solid #a33a36;
+    margin-bottom: 15px;
+}
+.lyric-line {
+    margin-bottom: 12px;
+}
+.lyric-line:last-child {
+    margin-bottom: 0;
+}
+.jp {
+    font-family: "Klee One", sans-serif;
+    font-weight: bold;
+    font-size: 13pt;
+    color: #332b29;
+}
+.pron {
+    font-size: 11pt;
+    color: #665d5a;
+}
+.kr {
+    font-size: 12pt;
+    color: #8c5a46;
+    margin-top: 2px;
+}
+.vocab-list {
+    display: table;
+    width: 100%;
+}
+.vocab-item {
+    display: table-row;
+}
+.vocab-term {
+    font-family: "Klee One", sans-serif;
+    display: table-cell;
+    font-weight: bold;
+    padding: 8px 10px 8px 0;
+    width: 40%;
+    color: #59443d;
+    border-bottom: 1px dashed #e6dfd5;
+}
+.vocab-def {
+    display: table-cell;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e6dfd5;
+}
+.vocab-item:last-child .vocab-term,
+.vocab-item:last-child .vocab-def {
+    border-bottom: none;
+}

@@ -5,5 +5,5 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 INPUT_FILE = BASE_DIR / "input/lyrics.txt"
-TEMPLATE_FILE = BASE_DIR / "templates/study_template_ink_save.html"
+TEMPLATE_FILE = BASE_DIR / "templates/study_template.html"
 OUTPUT = BASE_DIR / "output"
