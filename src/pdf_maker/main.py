@@ -26,9 +26,9 @@ def main():
         # PDF 생성
         OUTPUT.mkdir(exist_ok=True)
         output_name = OUTPUT / f"{data['study_no']}. {data['title']}.pdf"
-        weasyprint.HTML(string=html_content).write_pdf(output_name)
+        weasyprint.HTML(string=html_content, base_url=TEMPLATE_FILE.parent).write_pdf(output_name)
 
-        print(f"{data["title"]} pdf 출력을 완료했습니다")
+        print(f"{data["title"]} pdf 출력을 완료했습니다")        
     except Exception as e:
         print(f"오류 발생: {e}")
 

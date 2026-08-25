@@ -7,6 +7,14 @@
     margin: 10mm 15mm;
     background-color: #ffffff;
 }
+
+/* 페이지 전체 컨테이너 */
+.page-container {
+    height: 297mm;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -93,4 +101,10 @@ h2 {
 .vocab-item:last-child .vocab-term,
 .vocab-item:last-child .vocab-def {
     border-bottom: none;
+}
+
+.memo {
+    height: 250px;
+    font-size: 12pt;
+    color: #ffffff52;
 }

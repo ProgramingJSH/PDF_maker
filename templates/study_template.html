@@ -7,36 +7,45 @@
         <link rel="stylesheet" href="css/template.css" />
     </head>
     <body>
-        <h1>{{ title }}</h1>
-        <div class="subtitle">제 {{ study_no }}회 일본어 스터디</div>
+        <!-- 1페이지: 가사 -->
+        <div class="page_container">
+            <h1>{{ title }}</h1>
+            <div class="subtitle">제 {{ study_no }}회 일본어 스터디</div>
 
-        <div class="section">
-            <h2>🎧 주요 가사</h2>
-            <div class="lyrics">
-                <!-- jinja2 라이브러리를 사용해 for문으로 json의 데이터를 하나씩 읽어붙임 -->
-                {% for lyric in lyrics %}
-                <div class="lyric-line">
-                    <div class="jp">{{ lyric.jp }}</div>
-                    <div class="pron">[{{ lyric.pron }}]</div>
-                    <div class="kr">{{ lyric.kr }}</div>
+            <div class="section">
+                <h2>🎧 주요 가사</h2>
+                <div class="lyrics">
+                    <!-- jinja2 라이브러리를 사용해 for문으로 json의 데이터를 하나씩 읽어붙임 -->
+                    {% for lyric in lyrics %}
+                    <div class="lyric-line">
+                        <div class="jp">{{ lyric.jp }}</div>
+                        <div class="pron">[{{ lyric.pron }}]</div>
+                        <div class="kr">{{ lyric.kr }}</div>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+                <p style="text-align: right; font-size: 10pt; color: #888">
+                    * 전체 가사는 구글에서 '{{title}} 가사' 검색 요망
+                </p>
             </div>
-            <p style="text-align: right; font-size: 10pt; color: #888">
-                * 전체 가사는 구글에서 '{{title}} 가사' 검색 요망
-            </p>
         </div>
-
-        <div class="section">
-            <h2>📝 가사 속 핵심 단어</h2>
-            <div class="vocab-list">
-                <!-- jinja2 라이브러리를 사용해 for문으로 json의 데이터를 하나씩 읽어붙임 -->
-                {% for vocab in vocabs %}
-                <div class="vocab-item">
-                    <div class="vocab-term">{{ vocab.term }}</div>
-                    <div class="vocab-def">: {{ vocab.def }}</div>
+        <!-- 2페이지: 단어 -->
+        <div class="page_container">
+            <div class="section">
+                <h2>📝 가사 속 핵심 단어</h2>
+                <div class="vocab-list">
+                    <!-- jinja2 라이브러리를 사용해 for문으로 json의 데이터를 하나씩 읽어붙임 -->
+                    {% for vocab in vocabs %}
+                    <div class="vocab-item">
+                        <div class="vocab-term">{{ vocab.term }}</div>
+                        <div class="vocab-def">: {{ vocab.def }}</div>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+            </div>
+            <div class="section">
+                <h2>🇯🇵 메모</h2>
+                <div class="memo">자유롭게 사용하세요</div>
             </div>
         </div>
     </body>
