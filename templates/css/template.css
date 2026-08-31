@@ -13,6 +13,8 @@
     height: 297mm;
     display: flex;
     flex-direction: column;
+    break-after: page; /* 이 컨테이너가 끝나면 무조건 페이지를 넘김 */
+    page-break-after: always; /* 구형 브라우저 호환용 */
 }
 
 body {
@@ -92,6 +94,7 @@ h2 {
     width: 40%;
     color: #59443d;
     border-bottom: 1px dashed #e6dfd5;
+    word-break: keep-all; /* 단어 단위로 줄바꿈되도록 설정 */
 }
 .vocab-def {
     display: table-cell;
@@ -103,8 +106,31 @@ h2 {
     border-bottom: none;
 }
 
-.memo {
-    height: 250px;
-    font-size: 12pt;
-    color: #ffffff52;
+.alike-terms {
+    width: 100%;
+    display: table;
+    color: #59443d;
+}
+.alike-terms:last-child {
+    font-family: "Klee One", "Malgun Gothic", sans-serif;
+}
+.alike-row {
+    display: table-row;
+}
+.alike-term-1 {
+    width: 50%;
+    display: table-cell;
+    border-bottom: 1px dashed #e6dfd5;
+    padding: 8px 0;
+}
+.alike-term-2 {
+    width: 50%;
+    display: table-cell;
+    border-bottom: 1px dashed #e6dfd5;
+    padding: 8px 0;
+}
+
+.alike-row:last-child .alike-term-1,
+.alike-row:last-child .alike-term-2 {
+    border-bottom: none;
 }

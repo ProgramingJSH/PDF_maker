@@ -14,7 +14,6 @@ def main():
 
         # API로 데이터 생성 후 저장
         data = get_data_by_API(input_text)
-
         # Jinja2 HTML 템플릿을 불러오기
         with open(TEMPLATE_FILE, "r", encoding="utf-8") as f:
             template_str = f.read()
